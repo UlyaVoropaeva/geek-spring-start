@@ -22,5 +22,4 @@ public class WebMVCApllicationConfig implements WebMvcConfigurer {
 
         return resolver;
     }
-
 }
