@@ -12,7 +12,7 @@ import java.util.List;
 @Component
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class Cart {
-    private final List<Product> products ;
+    private final List<Product> products;
 
     private final ProductRepository productRepository;
 
@@ -21,9 +21,8 @@ public class Cart {
         this.products = new ArrayList<>();
     }
 
-
     public void add(int id) {
-        productRepository.getProductById(id).ifPresent(p ->products.add(p));
+        productRepository.getProductById(id).ifPresent(p -> products.add(p));
     }
 
     public void remove(int id) {

@@ -26,5 +26,4 @@ public class CartConfiguration {
         return new Shop(cartProvider);
     }
 
-
 }

@@ -9,10 +9,10 @@ public class Order {
     private String name;
     private int price;
 
-
     public Date getDate() {
         return date;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -38,7 +38,7 @@ public class Order {
     }
 
 
-    public Order(int id,Date date, String name, int price) {
+    public Order(int id, Date date, String name, int price) {
         this.id = id;
         this.date = date;
         this.name = name;

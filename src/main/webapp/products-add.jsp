@@ -6,14 +6,14 @@
 </head>
 
 <body>
-    <form th:action="@{'/products/app'}" th:object="${product}" method="post">
-        ID: <input type="text" th:field="*{id}"/>
-        <br>
-        NAME: <input type="text" th:field="*{name}"/>
-        <br>
-        PRICE: <input type="text" th:field="*{price}"/>
-        <br>
-        <button type="submit">Save</button>
-    </form>
+<form th:action="@{'/products/app'}" th:object="${product}" method="post">
+    ID: <input type="text" th:field="*{id}"/>
+    <br>
+    NAME: <input type="text" th:field="*{name}"/>
+    <br>
+    PRICE: <input type="text" th:field="*{price}"/>
+    <br>
+    <button type="submit">Save</button>
+</form>
 </body>
 </html>

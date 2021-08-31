@@ -1,7 +1,7 @@
 package app.component;
 
-
 import org.springframework.stereotype.Component;
+
 import javax.inject.Provider;
 
 @Component

@@ -18,7 +18,7 @@ public class ShopConfiguration {
     }
 
     public void start() {
-       Cart cart = shop.getCart();
+        Cart cart = shop.getCart();
         int parameter;
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
@@ -49,7 +49,6 @@ public class ShopConfiguration {
                 }
             }
         }
-
     }
 
     private String menu() {
@@ -61,5 +60,4 @@ public class ShopConfiguration {
                 "5. Создать новую корзину\n" +
                 "6. Выход";
     }
-
 }
