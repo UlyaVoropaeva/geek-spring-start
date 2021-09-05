@@ -1,13 +1,11 @@
 package app.configuration;
 
 import app.component.Cart;
-import app.component.Shop;
+import app.rapository.OrderRepository;
 import app.rapository.ProductRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-
-import javax.inject.Provider;
 
 @Configuration
 public class CartConfiguration {
@@ -22,9 +20,7 @@ public class CartConfiguration {
     }
 
     @Bean
-    public Shop shop(Provider<Cart> cartProvider) {
-        return new Shop(cartProvider);
+    public OrderRepository orderRepository() {
+        return new OrderRepository();
     }
-
-
 }

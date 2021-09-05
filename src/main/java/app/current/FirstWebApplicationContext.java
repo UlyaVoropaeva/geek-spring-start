@@ -9,6 +9,7 @@ public class FirstWebApplicationContext extends AbstractContextLoaderInitializer
     protected WebApplicationContext createRootApplicationContext() {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(FirstWebApplicationConfig.class);
-        return  context;
+        return context;
+
     }
 }

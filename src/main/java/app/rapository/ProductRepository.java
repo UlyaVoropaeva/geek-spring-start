@@ -1,9 +1,7 @@
 package app.rapository;
 
-
 import app.component.Product;
 import org.springframework.stereotype.Repository;
-
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,13 +16,12 @@ public class ProductRepository {
 
     @PostConstruct
     private void fillProductsList() {
-        products.add(new Product(counter.getAndIncrement(), "Apple", 10));
-        products.add(new Product(counter.getAndIncrement(), "Tomato", 20));
-        products.add(new Product(counter.getAndIncrement(), "Cucumber", 15));
-        products.add(new Product(counter.getAndIncrement(), "Potato", 18));
-        products.add(new Product(counter.getAndIncrement(), "Raspberry", 30));
+        products.add(new Product(counter.getAndIncrement(), "Apple", 10F));
+        products.add(new Product(counter.getAndIncrement(), "Tomato", 20F));
+        products.add(new Product(counter.getAndIncrement(), "Cucumber", 15F));
+        products.add(new Product(counter.getAndIncrement(), "Potato", 18.8F));
+        products.add(new Product(counter.getAndIncrement(), "Raspberry", 30.8f));
     }
-
 
     public Optional<Product> getProductById(int id) {
 
@@ -35,7 +32,6 @@ public class ProductRepository {
         }
 
         return Optional.empty();
-
     }
 
     public List<Product> getProducts() {

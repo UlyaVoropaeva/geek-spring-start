@@ -22,16 +22,14 @@ public class ProductController {
         this.productRepository = productRepository;
     }
 
-
-    @RequestMapping(value = "/products",method =  RequestMethod.GET)
+    @RequestMapping(value = "/products", method = RequestMethod.GET)
     public String getProducts(Model uiModel) {
         uiModel.addAttribute("products", productRepository.getProducts());
         return "products";
-
     }
 
-    @RequestMapping(value = "/products/{id}",method =  RequestMethod.DELETE)
-    public void  delete(@PathVariable String id){
+    @RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)
+    public void delete(@PathVariable String id) {
 
     }
 
