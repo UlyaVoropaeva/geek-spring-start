@@ -1,54 +1,30 @@
 package app.rapository;
 
 import app.component.Order;
-
-
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class OrderRepository {
-    private final List<Order> products = new ArrayList<>();
-    private final AtomicInteger counter = new AtomicInteger(1);
+    private final List<Order> orders = new ArrayList<>();
 
+    public OrderRepository() {
+        orders.add(new Order(1, LocalDate.now(), 12.8f, Collections.emptyList()));
 
-    public Optional<Order> getOrderById(int id) {
+    }
 
-        for (Order product : products) {
-            if (product.getId() == id) {
-                return Optional.of(product);
-            }
-        }
+    public Optional<Order> getById(int id) {
 
-        return Optional.empty();
-
+        return orders.stream().filter(o -> o.getId() == id).findFirst();
     }
 
     public List<Order> getOrders() {
-        return products;
+        return orders;
     }
 
-    public void addOrder(Order product) {
-        product.setId(counter.getAndIncrement());
-        products.add(product);
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder builder = new StringBuilder();
-
-        for (Order product : products) {
-            builder.append(product.getId());
-            builder.append(" - ");
-            builder.append(product.getDate());
-            builder.append(" - ");
-            builder.append(product.getName());
-            builder.append(" - ");
-            builder.append(product.getPrice());
-            builder.append(" money\n");
-        }
-
-        return builder.toString();
+    public void addOrder(Order order) {
+        this.orders.add(order);
     }
 }

@@ -2,7 +2,6 @@ package app;
 
 
 import app.component.Cart;
-import app.configuration.ApplicationConfiguration;
 import app.rapository.ProductRepository;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

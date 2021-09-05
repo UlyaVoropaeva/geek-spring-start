@@ -26,7 +26,6 @@ public class ProductController {
     public String getProducts(Model uiModel) {
         uiModel.addAttribute("products", productRepository.getProducts());
         return "products";
-
     }
 
     @RequestMapping(value = "/products/{id}", method = RequestMethod.DELETE)

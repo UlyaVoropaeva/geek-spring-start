@@ -1,47 +1,65 @@
 package app.component;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Order {
 
     private int id;
-    private Date date;
-    private String name;
-    private int price;
+    private LocalDate date;
+    private List<Product> products;
+    private float cost;
 
-    public Date getDate() {
-        return date;
+
+    public Order() {
     }
 
-    public void setId(int id) {
+    public Order(int id, LocalDate date, float cost, List<Product> products) {
         this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
+        this.date = date;
+        this.products = products;
+        this.cost = cost;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public int getPrice() {
-        return price;
+    public float getCost() {
+        return cost;
     }
 
+    public List<Product> getProducts() {
+        return products;
+    }
 
-    public Order(int id, Date date, String name, int price) {
+    public void setId(int id) {
         this.id = id;
+    }
+
+    public void setDate(LocalDate date) {
         this.date = date;
-        this.name = name;
-        this.price = price;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public void setCost(float cost) {
+        this.cost = cost;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", date=" + date +
+                ", products=" + products +
+                ", cost=" + cost +
+                '}';
     }
 }

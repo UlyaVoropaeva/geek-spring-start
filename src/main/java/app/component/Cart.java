@@ -44,7 +44,6 @@ public class Cart {
             builder.append(product.getPrice());
             builder.append(" money\n");
         }
-
         return builder.toString();
     }
 }

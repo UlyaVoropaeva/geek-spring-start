@@ -10,5 +10,6 @@ public class FirstWebApplicationContext extends AbstractContextLoaderInitializer
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.register(FirstWebApplicationConfig.class);
         return context;
+
     }
 }
